@@ -6,12 +6,27 @@ $password="";
 $database="zalego";
 
 $conn= mysqli_connect($server,$username,$password $database);
-if($conn)
+if (isset ($_POST["submitbutton"]))
 {
-    echo "Database connected succesfully";
-}
-else{
-    echo "Error occured";
+    //  1. fetch form data
+    $firstname= $_POST["firstname"];
+    $lastname= $_POST["lastname"];
+    $email= $_POST["email"];
+    $phonenumber= $_POST["phonenumber"];
+    $message= $_POST["message"];
+    //  2. submit form data
+
+    $insertData=mysqli_query($conn, "INSERT INTO contactus(firstname, lastname, email, phonenumber,message)VALUES("$firstname", "$lastname","$email","$phonenumber","$message")" );
+
+    // checking if its successfull
+    if($insertData)
+    {
+        echo "Data submitted successfully";
+    }
+    else {
+        echo "error occured";
+    }
+
 }
 ?>
 <!DOCTYPE html>
@@ -88,34 +103,34 @@ else{
                 <div class="row">
                     <div class="mb-3 col-lg-6">
                         <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your name">
+                        <input type="text" name="firstname" class="form-control" placeholder="Enter your name">
                     </div>
     
                     <div class="mb-3 col-lg-6">
                         <label for="lastName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Enter your Last name">
+                        <input type="text" class="form-control" name="lastname" placeholder="Enter your Last name">
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3 col-lg-6">
                         <label for="phoneNumber" class="form-label">First Name</label>
-                        <input type="tel" class="form-control" placeholder="Enter your Phone number" required>
+                        <input type="tel" class="form-control" name="phonenumber" placeholder="Enter your Phone number" required>
                     </div>
     
                     <div class="mb-3 col-lg-6">
                         <label for="Email" class="form-label">Last Name</label>
-                        <input type="email" class="form-control" placeholder="Enter your Email">
+                        <input type="email" class="form-control" name="email" placeholder="Enter your Email">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <label for="message" class="form-label">Message</label>
-                        <textarea cols="30" rows="10" class="form-control"></textarea>
+                        <textarea cols="30" rows="10" class="form-control" name="message"></textarea>
                     </div>
                     
 
                 </div>
-                <button type="submit" class="btn btn-primary mt-5">Send A message</button>
+                <button type="submit" class="btn btn-primary mt-5" name="submitbutton">Send A message</button>
                
             </form>
         </div>
