@@ -1,34 +1,5 @@
-<?php
-//database connection
-$server="localhost";
-$username="root";
-$password="";
-$database="zalego";
+<?php include('process.php') ?>
 
-$conn= mysqli_connect($server,$username,$password $database);
-if (isset ($_POST["submitbutton"]))
-{
-    //  1. fetch form data
-    $firstname= $_POST["firstname"];
-    $lastname= $_POST["lastname"];
-    $email= $_POST["email"];
-    $phonenumber= $_POST["phonenumber"];
-    $message= $_POST["message"];
-    //  2. submit form data
-
-    $insertData=mysqli_query($conn, "INSERT INTO contactus(firstname, lastname, email, phonenumber,message)VALUES("$firstname", "$lastname","$email","$phonenumber","$message")" );
-
-    // checking if its successfull
-    if($insertData)
-    {
-        echo "Data submitted successfully";
-    }
-    else {
-        echo "error occured";
-    }
-
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,6 +71,16 @@ if (isset ($_POST["submitbutton"]))
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita soluta officiis dolorem unde, numquam aspernatur sequi inventore nemo temporibus sapiente.
             </p>
             <form action="index.php" method="POST">
+                <?php
+                    if($response)
+                    {
+                        include('response.php');
+                    }
+
+                ?>
+                    
+                
+
                 <div class="row">
                     <div class="mb-3 col-lg-6">
                         <label for="firstName" class="form-label">First Name</label>
