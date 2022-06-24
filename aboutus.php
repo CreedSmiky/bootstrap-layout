@@ -1,3 +1,23 @@
+<?php
+$server="localhost";
+$username="root";
+$password="";
+$database="zalego";
+
+$conn= mysqli_connect($server,$username,$password, $database);
+
+
+if(isset($_POST["submitButton"]))
+{
+    $email=$_POST["email"];
+
+
+    $insertdata= mysqli_query($conn, "INSERT INTO subscribers(email)VALUES('$email')");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,21 +25,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="style2 .css"/>
+    <link rel="stylesheet" href="style2.css"/>
     <title>About us</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
+
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">ZALEGO ACADEMY</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavigation" aria-expanded="false">
+            <a href="#" class="navbar-brand">Zalego Academy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDisplayNavigations" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavigation">
+            <div class="collapse navbar-collapse" id="navbarDisplayNavigations">
                 <div class="navbar-nav">
-                    <a href="index.html" class="nav-link active">Home</a>
-                    <a href="#" class="nav-link active">About us</a>
-                    <a href="#" class="nav-link">Contact us</a>
+                    <a href="index.php" class="nav-link active">Home</a>
+                    <a href="aboutus.php" class="nav-link active">About us</a>
+                    <a href="enroll.html" class="btn btn-primary">Register now </a>
                 </div>
             </div>
         </div>
@@ -62,20 +83,20 @@
                 <button class="btn btn-primary">View Details</button>
              </div>
         </div>
-        <div class="messages">
+        <form action="aboutus.php" method="POST">
             <div class="row">
                 <p class="text-center">Subscribe to get more,latest news about Zalego Academy</p>
                 <div class="col-lg-6">
                     <label for="email" class="form-label">Email address</label>
-                    <input type="email" id="email" class="form-control" placeholder="Enter your email address">
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email address" name="email">
                 </div>
                 <div class="col-lg-6 mt-3">
-                    <button class="btn btn-primary mt-3" type="submit">Submit</button>
+                    <button class="btn btn-primary mt-3" type="submit" name="submitButton">Submit</button>
                 </div>
             </div>
             
             
-        </div>
+        </form>
         <hr>
         &COPY;company 2022
     

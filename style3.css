@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    background-color: gainsboro;
+    margin-top: 43px;
+}
+.navbar{
+    padding: 0;
+}

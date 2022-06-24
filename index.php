@@ -1,34 +1,6 @@
-<?php
-//database connection
-$server="localhost";
-$username="root";
-$password="";
-$database="zalego";
+<?php include('process.php')   ?>
 
-$conn= mysqli_connect($server,$username,$password $database);
-if (isset ($_POST["submitbutton"]))
-{
-    //  1. fetch form data
-    $firstname= $_POST["firstname"];
-    $lastname= $_POST["lastname"];
-    $email= $_POST["email"];
-    $phonenumber= $_POST["phonenumber"];
-    $message= $_POST["message"];
-    //  2. submit form data
 
-    $insertData=mysqli_query($conn, "INSERT INTO contactus(firstname, lastname, email, phonenumber,message)VALUES("$firstname", "$lastname","$email","$phonenumber","$message")" );
-
-    // checking if its successfull
-    if($insertData)
-    {
-        echo "Data submitted successfully";
-    }
-    else {
-        echo "error occured";
-    }
-
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,8 +25,8 @@ if (isset ($_POST["submitbutton"]))
             <div class="collapse navbar-collapse" id="navbarDisplayNavigations">
                 <div class="navbar-nav">
                     <a href="#" class="nav-link active">Home</a>
-                    <a href="about us.html" class="nav-link active">About us</a>
-                    <a href="#" class="nav-link">Contact us</a>
+                    <a href="aboutus.php" class="nav-link active">About us</a>
+                    <a href="enroll.html" class="btn btn-primary">Register now </a>
                 </div>
             </div>
         </div>
