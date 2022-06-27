@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 <?php include('process.php')   ?>
 
 
+=======
+<?php include('process.php') ?>
+
+>>>>>>> 0737e184e2cbda56707796769d5147d80e50d1ac
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,6 +77,16 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita soluta officiis dolorem unde, numquam aspernatur sequi inventore nemo temporibus sapiente.
             </p>
             <form action="index.php" method="POST">
+                <?php
+                    if($response)
+                    {
+                        include('response.php');
+                    }
+
+                ?>
+                    
+                
+
                 <div class="row">
                     <div class="mb-3 col-lg-6">
                         <label for="firstName" class="form-label">First Name</label>

@@ -1,5 +1,6 @@
 <?php
 //database connection
+$response="";
 $server="localhost";
 $username="root";
 $password="";
@@ -25,6 +26,10 @@ if (isset ($_POST["submitbutton"]))
     }
     else {
         echo "error occured";
+        $response = "Data submitted successfully";
+    }
+    else {
+        $response = "error occured";
     }
 
 }

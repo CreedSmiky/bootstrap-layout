@@ -110,7 +110,7 @@ if(isset($_POST["Submitbutton"]))
                             <option selected>--select your gender--</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
-                        </select>
+                        </select> 
                     </div>
                 </div>
                 <br>
