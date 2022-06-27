@@ -9,3 +9,9 @@ main{
 .navbar{
     padding: 0;
 }
+
+.sign-up-card{
+    box-sizing: border-box;
+    box-shadow: 2px 2px whitesmoke;
+    z-index: 5;
+}
