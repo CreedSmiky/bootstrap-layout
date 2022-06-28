@@ -29,23 +29,7 @@ if(isset($_POST["submitButton"]))
     <title>About us</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
-
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">Zalego Academy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDisplayNavigations" aria-expanded="false">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarDisplayNavigations">
-                <div class="navbar-nav">
-                    <a href="index.php" class="nav-link active">Home</a>
-                    <a href="aboutus.php" class="nav-link active">About us</a>
-                    <a href="enroll.html" class="btn btn-primary">Register now </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
+   <?php include ('navbar.php') ?>
     <main class="p-5">
             <h1>About Us</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ut incidunt ipsam tenetur, ad magni esse possimus alias. Mollitia sint dignissimos, excepturi eos doloremque assumenda quos cum nobis. Perspiciatis autem enim adipisci quae, fuga ratione possimus animi mollitia harum illum optio sequi eaque corporis rerum recusandae vitae quidem aliquid ab?</p>

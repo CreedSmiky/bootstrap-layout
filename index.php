@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 <?php include('process.php')   ?>
 
-
-=======
-<?php include('process.php') ?>
-
->>>>>>> 0737e184e2cbda56707796769d5147d80e50d1ac
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,22 +14,7 @@
 
     <!-- start of navigation -->
 
-    <nav class="navbar navbar-expand-lg bg-light fixed-top shadow">
-
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">Zalego Academy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDisplayNavigations" aria-expanded="false">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarDisplayNavigations">
-                <div class="navbar-nav">
-                    <a href="#" class="nav-link active">Home</a>
-                    <a href="aboutus.php" class="nav-link active">About us</a>
-                    <a href="enroll.php" class="btn btn-primary">Register now </a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php include ('navbar.php') ?>
     <!-- End navigation bar -->
     <main class="p-5 mb-4 bg-light rounded-2 ">
         <h1>Welcome, Chris </h1>

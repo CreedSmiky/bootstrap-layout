@@ -10,8 +10,9 @@ main{
     padding: 0;
 }
 
-.sign-up-card{
-    box-sizing: border-box;
-    box-shadow: 2px 2px whitesmoke;
-    z-index: 5;
+
+main ul li span i{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }

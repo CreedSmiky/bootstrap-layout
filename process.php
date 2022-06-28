@@ -28,9 +28,7 @@ if (isset ($_POST["submitbutton"]))
         echo "error occured";
         $response = "Data submitted successfully";
     }
-    else {
-        $response = "error occured";
-    }
+  
 
 }
 ?>
